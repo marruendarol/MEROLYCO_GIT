@@ -174,14 +174,17 @@
 <!-- Listado 1  ============================================================-->
 <script id='busProductosB' type='text/ractive'>
 
-<input type="text" id="busquedaI" value="{{busqueda}}" placeholder="Nombre del producto"  name="busqueda">
+
+	<div id="wrapperListB" >
+	    <div id="scroller" >
+
+	    	<input type="text" class="inputBus" id="busquedaI" value="{{busqueda}}" placeholder="Nombre del producto"  name="busqueda">
 
 <div id="loaderB">
 	<span class='ui-icon ui-icon-loading'></span><div class='loadTitle'>buscando...</div>
 </div>
 
-	<div id="wrapperListB" >
-	    <div id="scroller" >
+
 	        <ul data-role="listview" id="listview">
 	            {{#items}}
 	            <li  class="irow" data-icon="false">
@@ -328,7 +331,7 @@
 			        </tr>
 			        {{/if}}
 
-			        {{#if perms.precio_pub}}
+			        {{#if perms.precio_min}}
 			        <tr>
 			          <th>Precio Mínimo</th>
 			          <td>{{formatMoney(data.precios[1])}}</td>
@@ -336,9 +339,9 @@
 			         {{/if}}
 
 
-			        {{#if perms.precio_min}}
+			        {{#if perms.precio_pub}}
 			           <tr>
-			          <th>Precio Máximo</th>
+			          <th>Precio Público</th>
 			          <td>{{formatMoney(data.precios[0])}}</td>
 			        </tr>
 			         {{/if}}

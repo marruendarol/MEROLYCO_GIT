@@ -646,6 +646,11 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
 }
 
 
+.inputBus{
+	z-index: 10000;
+	
+
+}
 #wrapperMain {
     z-index: 1;
     width: 99%;
@@ -675,6 +680,15 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
 }
 
 #wrapperListP {
+    z-index: 0;
+    top: 48px;
+    bottom: 50px;
+    width: 100%;
+    position: fixed;
+    margin-bottom: 100px;
+}
+
+#wrapperListB {
     z-index: 0;
     top: 48px;
     bottom: 50px;

@@ -12,10 +12,14 @@ var ctrl_core = {
 
 			var username= window.localStorage.getItem("username");
 			if(username!=undefined){
+				//$.mobile.changePage("#mainScreen")
 				ctrl_loginS.checkLogin({login:window.localStorage.getItem("username"),pw:window.localStorage.getItem("password")})
 			}else{
 				$.mobile.changePage("#login")
 			}
+
+
+			console.log("LLEGO ESTA")
 
 	  		
 	},

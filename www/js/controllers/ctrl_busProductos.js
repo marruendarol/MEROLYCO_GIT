@@ -25,7 +25,7 @@ var ctrl_busProductos = {
 	},
 	getData : function(){
 
-		$('#loaderB').show();
+		//$('#loaderB').show();
 
 
 		var params =  "data=" +  JSON.stringify({"pn":1,"rpp":10,"si":"producto.cve_art","sd":"ASC","q":str}) 
@@ -35,8 +35,15 @@ var ctrl_busProductos = {
 		ctrl_busProductos.mainObj.set('searchOn',true)
 		ctrl_busProductos.mainObj.set('items',res.data)
 
-		myScrollB.refresh()
-		$('#loaderB').hide();
+	
+
+		setTimeout(function () {
+		
+            myScrollB.refresh()
+           
+        }, 10);
+
+		//jqm.hideLoader();
 		
 	},
 	render : function(res){
@@ -76,7 +83,7 @@ var ctrl_busProductos = {
                 //$("#begin").hide();
             }
             if (this.y == this.maxScrollY){
-            	jqm.showLoader("Cargando productos...");
+            	//jqm.showLoader("Cargando productos...");
             	ctrl_busProductos.requestData();
 
             }
@@ -109,7 +116,7 @@ var ctrl_busProductos = {
 			for (var i = 0; i < res.data.length; i++) {
 				ctrl_busProductos.mainObj.push('items',res.data[i])
 			}
-				jqm.hideLoader();
+				//jqm.hideLoader();
 			
 			//myScrollP.updateCache(itemCount, data);
 			myScrollB.refresh();

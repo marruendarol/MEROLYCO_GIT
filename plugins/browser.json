@@ -4,45 +4,43 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "config.xml": {
-                "parents": {
-                    "/*": []
-                }
-            }
-        }
+        "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
+            "PACKAGE_NAME": "com.lyco.merolyco"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
+            "PACKAGE_NAME": "com.lyco.merolyco"
         },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.lyco.merolyco"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        }
+    }
 }
