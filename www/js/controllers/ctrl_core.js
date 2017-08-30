@@ -10,20 +10,7 @@ var ctrl_core = {
 	init : function(){	
 		ctrl_core.routeListeners();
 
-			var username= window.localStorage.getItem("username");
-			if(username!=undefined){
-				//$.mobile.changePage("#mainScreen")
-				var user  =window.localStorage.getItem("username") || "";
-				var pass =  window.localStorage.getItem("password") || "";
-				ctrl_loginS.checkLogin({login:user,pw:pass})
-			}else{
-				$.mobile.changePage("#login")
-			}
 
-
-			console.log("LLEGO ESTA")
-
-	  		
 	},
 	loadController : function(controllerURL,params,reload){
 		
@@ -48,19 +35,18 @@ var ctrl_core = {
 	routeListeners : function(){
 
 
-		try{
-		//	clearInterval(expInt);
-		//	socket.removeListener('opened'+userRoom,ctrl_list.expResponse);
-		} catch (error) {}
-		
-
 		$(document).on("pagebeforeshow","#initialBlank", function() {
-	       
-	    });
+	       		var username= window.localStorage.getItem("username");
+	       		alert(user)
+			if(username!=undefined){
+				//$.mobile.changePage("#mainScreen")
+				var user  =window.localStorage.getItem("username") || "";
+				var pass =  window.localStorage.getItem("password") || "";
+				ctrl_loginS.checkLogin({login:user,pw:pass})
 
-		$(document).on("pagebeforeshow","#firstP", function() {
-	        var params = { init : 'ctrl_first.init' }
-	    	ctrl_core.loadController("./js/controllers/ctrl_first.js",params);
+			}else{
+				$.mobile.changePage("#login")
+			}
 	    });
 
 		$(document).on("pagebeforeshow","#login", function() {
