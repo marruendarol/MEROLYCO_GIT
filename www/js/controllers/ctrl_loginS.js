@@ -57,8 +57,6 @@ var ctrl_loginS = {
             url: serverURL + 'api/login',
             dataType: 'JSON'
             }).done(function( response ) {
-            	
-              
             	if(response.length>0){
             		userdata = response[0]
        

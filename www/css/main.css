@@ -648,9 +648,9 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
 
 .inputBus{
 	z-index: 10000;
-	
-
 }
+
+
 #wrapperMain {
     z-index: 1;
     width: 99%;
