@@ -55,12 +55,7 @@ var ctrl_core = {
 		
 
 		$(document).on("pagebeforeshow","#initialBlank", function() {
-	       	var username= window.localStorage.getItem("username");
-			if(username!=undefined){
-				$.mobile.changePage("#mainScreen")
-			}else{
-				$.mobile.changePage("#firstP")
-			}
+	       
 	    });
 
 		$(document).on("pagebeforeshow","#firstP", function() {
