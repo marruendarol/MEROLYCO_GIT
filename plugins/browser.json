@@ -1,0 +1,48 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.nucleo.cliomedic"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.lyco.merolyco"
+        }
+    },
+    "dependent_plugins": {}
+}

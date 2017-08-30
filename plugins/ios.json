@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-media-capture": {
+            "CAMERA_USAGE_DESCRIPTION": "Subir Expediente",
+            "MICROPHONE_USAGE_DESCRIPTION": "Subir Expediente",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": "Subir Expediente",
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.merolyco.catalogo"
+        }
+    }
+}
