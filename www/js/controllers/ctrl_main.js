@@ -40,7 +40,7 @@ $(document).ready(function() {
 function initApp(){
 
      $.support.cors = true;
-    
+      
     $.mobile.allowCrossDomainPages = true;
   
 

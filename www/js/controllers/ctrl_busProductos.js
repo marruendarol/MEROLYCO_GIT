@@ -8,6 +8,7 @@ var spec = "";
 itemCount = 1;
 str = "";
 
+
 var ctrl_busProductos = {
 	data : {},
 	pageDiv : "#busProCont",
@@ -48,7 +49,7 @@ var ctrl_busProductos = {
 	},
 	render : function(res){
 		
-		productos = {items :[],searchOn:false};
+		productos = {items :[],searchOn:false,busqueda:str};
 
 		ctrl_busProductos.mainObj = template.render('#busProductosB',ctrl_busProductos.pageDiv,productos)
 
@@ -60,6 +61,7 @@ var ctrl_busProductos = {
 			str = $('#busquedaI').val();
 			if(str.length>2){
 				ctrl_busProductos.getData();	
+				
 			}
 			
 		})
@@ -105,6 +107,10 @@ var ctrl_busProductos = {
 			console.log("detail prod")
 			
 		});	
+
+		if(str!=""){
+			ctrl_busProductos.getData();
+		}
 
 	},
 	requestData :function() {

@@ -37,7 +37,8 @@ var ctrl_detail = {
 
 		var mainObj = template.render('#detailPT',ctrl_detail.pageDiv,resObj)
 
-
+		try {
+		myScroll.destroy(); } catch (e){}
 		
 		$(ctrl_detail.pageDiv).trigger("create");
 
@@ -54,7 +55,9 @@ var ctrl_detail = {
 			disableMouse: false, // false if you want the slider to be usable with a mouse (desktop)
 		 	interactiveScrollbars: true })
 		
-	
+			setTimeout(function(){ myScroll.refresh() }, 500);
+
+			
 	}
 }
 

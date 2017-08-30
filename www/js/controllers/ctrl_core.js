@@ -13,7 +13,9 @@ var ctrl_core = {
 			var username= window.localStorage.getItem("username");
 			if(username!=undefined){
 				//$.mobile.changePage("#mainScreen")
-				ctrl_loginS.checkLogin({login:window.localStorage.getItem("username"),pw:window.localStorage.getItem("password")})
+				var user  =window.localStorage.getItem("username") || "";
+				var pass =  window.localStorage.getItem("password") || "";
+				ctrl_loginS.checkLogin({login:user,pw:pass})
 			}else{
 				$.mobile.changePage("#login")
 			}
