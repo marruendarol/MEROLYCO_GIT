@@ -39,10 +39,20 @@ $(document).ready(function() {
 
 function initApp(){
 
+
+   setTimeout(function() {
+        try {
+          navigator.splashscreen.hide();  
+        } catch (e){};
+        
+    }, 100);
+
      $.support.cors = true;
       
     $.mobile.allowCrossDomainPages = true;
   
+
+
 
 
    $.mobile.pageContainer = $('#container');
