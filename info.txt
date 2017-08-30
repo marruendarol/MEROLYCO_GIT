@@ -1,0 +1,124 @@
+Node version: v4.4.7
+
+Cordova version: 4.2.0
+
+Config.xml file: 
+
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="290" id="com.nucleo.cliomedic" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Cliomedic</name>
+    <description>
+       Cliomedic
+    </description>
+    <author email="dev@n4ymedio.mx" href="n4ymedio.mx">
+        Nucleo 4 y Medio
+    </author>
+    <content src="index.html" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="target-device" value="handset" />
+    <preference name="BackgroundColor" value="0x0000" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+    <plugin name="cordova-plugin-device" source="npm" />
+    <plugin name="cordova-plugin-network-information" source="npm" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+    <plugin name="cordova-plugin-geolocation" source="npm" />
+    <plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <plugin name="cordova-plugin-camera" source="npm" />
+    <plugin name="cordova-plugin-file-transfer" source="npm" />
+    <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="Subir Expediente" />
+        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="Subir Expediente" />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Subir Expediente" />
+    </plugin>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <config-file parent="UIStatusBarHidden" platform="ios">
+        <true />
+    </config-file>
+    <config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios">
+        <false />
+    </config-file>
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashScreenBackgroundColor" value="0x0000" />
+    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <icon height="57" platform="ios" src="iconIOS.png" width="57" />
+    <icon height="120" platform="ios" src="iconIOS2.png" width="120" />
+    <splash height="480" platform="ios" src="Default.png" width="320" />
+    <splash height="960" platform="ios" src="Default@2x.png" width="640" />
+    <splash height="1136" platform="ios" src="Default-568h@2x.png" width="640" />
+    <splash height="1334" platform="ios" src="Default-667h@2x.png" width="750" />
+    <splash height="2208" platform="ios" src="Default-Portrait-736h@3x.png" width="1242" />
+    <splash height="1242" platform="ios" src="Default-Landscape-736h@3x.png" width="2208" />
+    <splash height="1024" platform="ios" src="Default-Portrait.png" width="768" />
+    <splash height="768" platform="ios" src="Default-Landscape.png" width="1024" />
+    <splash height="2048" platform="ios" src="Default-Portrait@2x.png" width="1536" />
+    <splash height="1536" platform="ios" src="Default-Landscape@2x.png" width="2048" />
+    <access origin=".*" />
+    <access origin="http://*" />
+    <access origin="https://*" />
+    <access origin="*" subdomains="true" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
+    <preference name="EnableViewportScale" value="false" />
+    <access launch-external="yes" origin="geo:*" />
+    <access launch-external="yes" origin="google.navigation:*" />
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <allow-navigation href="http://cliomedic.com/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="wss://*/*" />
+    <allow-navigation href="data:*" />
+    <engine name="android" spec="~5.1.1" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.0" />
+</widget>
+
+
+Plugins: 
+
+cordova-plugin-camera,cordova-plugin-compat,cordova-plugin-device,cordova-plugin-file,cordova-plugin-file-transfer,cordova-plugin-geolocation,cordova-plugin-inappbrowser,cordova-plugin-media-capture,cordova-plugin-network-information,cordova-plugin-splashscreen,cordova-plugin-whitelist
+
+Error retrieving Android platform information: Error: android: Command failed with exit code ENOENT
+
+
+

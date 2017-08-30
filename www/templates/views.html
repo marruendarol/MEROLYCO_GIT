@@ -1,0 +1,405 @@
+<!-- FIRST ============================================================-->
+<script id='firstT' type='text/ractive'>
+           <button class="btnGen" on-tap="login">Ingresar a mi cuenta</button>
+         <!--  <button class="btnGen" on-tap="registro">Registrar usuario nuevo</button> -->
+</script>
+
+<!--  LOGIN ============================================================-->
+<script id='loginT' type='text/ractive'>
+
+
+  <div id="wrapperMain" class="mainBackI" >
+
+  		   <div id="logoLoginB">
+		<img src="img/logoForma.png">
+	</div>
+
+
+            <div class="labelT">Usuario:</div>
+            <input type="text" name="name" id="name"  value="" data-clear-btn="true" data-mini="true">
+             <div class="labelT">Contraseña: </div>
+            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+
+                <a href="#" data-rel="close" class="btnNaranja ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" on-tap="ingresar">Ingresar</a>    
+
+              <!--  <a class="linksTexto" href="#recuperar">¿Olvidaste tu contraseña?</a>-->
+
+  </div>
+
+
+</script>
+
+<!--  Recuperar ============================================================-->
+<script id='recuperarT' type='text/ractive'>
+    
+
+
+    <div  role="main" class="ui-content">
+      <div class="title">Ingresa tu correo y te enviaremos tu contraseña</div>
+            <div class="labelT">Correo:</div>
+            <input type="text" name="name" id="email" value="" data-clear-btn="true" data-mini="true">
+            <div class="ui-grid-a">
+				<a href="#" data-rel="close" class="btnNaranja ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" on-tap="recuperar">Enviar correo</a>
+            </div>
+    </div>
+    
+
+</script>
+
+
+
+<!--  HOME ============================================================-->
+	<script id='mainT' type='text/ractive'>
+    
+
+
+
+	{{>menuT}}
+
+	 <div data-role="header" id="headerLogo" data-position="fixed">
+        <div id="logoPant">
+		<img src="img/logoForma.png">
+	</div>
+
+     <!--   <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>  -->
+        <a href="#add-form" data-icon="gear" data-theme="a" class="gearIco ui-btn-right" data-iconpos="notext">Info</a>
+    </div><!-- /header -->
+
+    <div role="main" >
+           <div id="wrapperMain" class="mainBackI" >
+
+
+           <div class="botCont">
+
+       				<div class="listMenu backm1" on-tap="lineas">
+					</div>
+
+					<div class="listMenu backm2" on-tap="buscar">
+					</div>
+
+					
+
+			</div>		
+		</div>
+
+
+    </div>
+ 
+     <!-- <div id="map" style="display:none;"></div> -->
+
+    </script>
+
+
+
+<!-- Listado 1  ============================================================-->
+<script id='listT' type='text/ractive'>
+
+	<div id="wrapperList" >
+	    <div id="scroller" >
+	        <ul data-role="listview" id="listview">
+	            {{#items}}
+	            <li  data-icon="false">
+	                <a class="autoli" on-click="listDetail" on-tap="listDetail" data-transition="fade">
+	                   
+	                   	<div class="small-10 column rPad">
+	                        <div class="nSucursal">{{correctCase(descripcion)}}</div>
+	                        
+	                    </div>
+
+	                    
+	                    <div class="small-1 column rPad">
+	                        <div class="fNaranja"> 
+	                        <img src="img/fNaranja.png">
+	                        </div>
+	                    </div>
+	                </a>
+	            </li>
+	            {{/items}}
+	        </ul>
+
+	        {{#if items.length==0}}
+	        	<h4 style="margin:20px;">No se han encontrado lineas</h4>
+	        {{/if}}
+
+	    </div>
+	</div>
+
+
+
+
+</script>
+
+<!-- Listado 1  ============================================================-->
+<script id='listProductosT' type='text/ractive'>
+
+
+
+	<div id="wrapperListP" >
+	    <div id="scroller" >
+	        <ul data-role="listview" data-filter="true" data-filter-placeholder="filtrar..."  id="listview">
+	            {{#items}}
+	            <li  class="irow" data-icon="false">
+	                <a class="autoli" on-click="listDetail" on-tap="listDetail" data-transition="fade">
+	                   
+	                   	<div class="small-10 column rPad">
+	                        <div class="nSucursal">{{correctCase(alias)}}</div>
+	                        <div class="nSub">{{cve_art}}</div>
+	                        
+	                    </div>
+
+	                    
+	                    <div class="small-1 column rPad">
+	                        <div class="fNaranja"> 
+	                        <img src="img/fNaranja.png">
+	                        </div>
+	                    </div>
+	                </a>
+	            </li>
+	            {{/items}}
+	        </ul>
+
+	        {{#if items.length==0}}
+	        	<h4 style="margin:20px;"> no existen productos </h4>
+	        {{/if}}
+
+	    </div>
+	</div>
+
+
+
+
+</script>
+
+
+<!-- Listado 1  ============================================================-->
+<script id='busProductosB' type='text/ractive'>
+
+<input type="text" id="busquedaI" value="{{busqueda}}" placeholder="Nombre del producto"  name="busqueda">
+
+<div id="loaderB">
+	<span class='ui-icon ui-icon-loading'></span><div class='loadTitle'>buscando...</div>
+</div>
+
+	<div id="wrapperListB" >
+	    <div id="scroller" >
+	        <ul data-role="listview" id="listview">
+	            {{#items}}
+	            <li  class="irow" data-icon="false">
+	                <a class="autoli" on-click="listDetail" on-tap="listDetail" data-transition="fade">
+	                   
+	                   	<div class="small-10 column rPad">
+	                        <div class="nSucursal">{{correctCase(alias)}}</div>
+	                        <div class="nSub">{{cve_art}}</div>
+	                        
+	                    </div>
+
+	                    
+	                    <div class="small-1 column rPad">
+	                        <div class="fNaranja"> 
+	                        <img src="img/fNaranja.png">
+	                        </div>
+	                    </div>
+	                </a>
+	            </li>
+	            {{/items}}
+	        </ul>
+
+	         {{#if items.length==0 && searchOn}}
+	        	<h4 style="margin:20px;">No existen productos bajo este término </h4>
+	        {{/if}}
+
+
+	    </div>
+	</div>
+
+
+
+
+</script>
+
+
+
+<!--  Secciones Historico  ============================================================-->
+<script id='seccsExp' type='text/ractive'>
+    <h1>{{nombre}}</h1>
+    <div id="wrapperList">
+        <div id="scroller">
+            <ul data-role="listview" id="listview">
+                {{#items}}
+                <li data-icon="false">
+                    <a class="autoli" on-tap="clickSecc" data-transition="fade">
+                        <div class="small-10 column rPad">
+                            <div class="nSucursal">{{secname}} </div>
+                        </div>
+                        <div class="small-1 column rPad">
+                            <div class="fNaranja">
+                                <img src="img/fNaranja.png">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/items}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+
+
+
+<!--  Info Personales ============================================================-->
+<script id='detailPT' type='text/ractive'>
+
+<div id="wrapperInfo" >
+    <div id="scroller">
+        <div class="conte">
+            <div class="small-12 column collapse gapbot">
+
+            	<table data-role="table" id="table_prod" data-mode="">
+			      <thead>
+			        <tr>
+			          <th></th>
+			          <th></th>
+			        </tr>
+			      </thead>
+			      <tbody>
+
+
+
+
+            		{{#if perms.clave || perms.clave==undefined}}
+			      	<tr>
+			          <th>Clave Artículo</th>
+			          <td>{{data.cve_art}}</td>
+			        </tr>
+			        {{/if}}
+
+			         {{#if perms.desc}}
+			        <tr>
+			          <th>Descripción</th>
+			          <td>{{data.descrip}}</td>
+			        </tr>
+			        {{/if}}
+
+			         <tr>
+			          <th>Linea</th>
+			          <td>{{data.web}}</td>
+			        </tr>
+
+			        {{#if perms.e1}}
+			        <tr>
+			          <th>A1</th>
+			          <td>{{data.exist[0]}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.e2}}
+			        <tr>
+			          <th>A2</th>
+			          <td>{{data.exist[1]}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.e3}}
+			        <tr>
+			          <th>A3</th>
+			          <td>{{data.exist[2]}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.e4}}
+			        <tr>
+			          <th>A4</th>
+			          <td>{{data.exist[3]}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.e5}}
+			        <tr>
+			          <th>A5</th>
+			          <td>{{data.exist[4]}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.total}}
+			        <tr>
+			          <th>Total</th>
+			          <td>{{data.total}}</td>
+			        </tr>
+			        {{/if}}
+
+			        {{#if perms.precio_pub}}
+			        <tr>
+			          <th>Precio Mínimo</th>
+			          <td>{{formatMoney(data.precios[1])}}</td>
+			        </tr>
+			         {{/if}}
+
+
+			        {{#if perms.precio_min}}
+			           <tr>
+			          <th>Precio Máximo</th>
+			          <td>{{formatMoney(data.precios[0])}}</td>
+			        </tr>
+			         {{/if}}
+
+			         {{#if perms.des_max}}
+			           <tr>
+			          <th>Descuento Máximo</th>
+			          <td>{{data.precios[2]}}</td>
+			        </tr>
+			        {{/if}}
+
+			      	
+			      </tbody>
+			    </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+	
+</script>
+
+
+
+
+<!--  MENU ============================================================-->
+<script id='menuT' type='text/html'>
+ 
+
+
+    <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="b" id="add-form">
+
+      
+            <div class="cardName gapbot">{{userData.nombre}}</div>
+
+        	<br>
+
+
+
+            <button on-tap="cerrarsesion" class="ui-btn" >cerrar sesión</button>
+
+
+            <div class="version">versión 1.2.1</div>
+
+    </div><!-- /panel -->
+
+
+
+		<div id="galCont">
+				<div on-tap="closeZoom" class="closeZoom">X</div>
+				 <div id="cardRepZoom" >
+            <div class="cardName">{{userData.nombre}}</div>
+             <div class="cardId">{{userData.cardHypen}}</div>
+            <div class="cardVenc">{{userData.vencimiento}}</div>
+            <!--<div class="cardCCV">{{userData.ccv}}</div> -->
+
+            </div>
+
+
+		</div>
+
+</script>
+
+
