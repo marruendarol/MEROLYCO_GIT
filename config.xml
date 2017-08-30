@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="296" id="com.lyco.merolyco" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-versionCode="297" id="com.lyco.merolyco" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Merolyco</name>
     <description>
        Merolyco
@@ -44,7 +44,7 @@
     <config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios">
         <false />
     </config-file>
-    <preference name="SplashScreenDelay" value="0" />
+    <preference name="SplashScreenDelay" value="2000" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashScreenBackgroundColor" value="0xffff" />
