@@ -18,10 +18,15 @@ function handleClicks(e){
 }
 
 
+ document.addEventListener("deviceready", onDeviceReady, false);
+
 // DOM Ready =============================================================
+
 function onDeviceReady(){
 
-
+  setTimeout(function() {
+     navigator.splashscreen.hide();
+}, 1000);
  
    initApp();
 }
@@ -39,13 +44,8 @@ $(document).ready(function() {
 
 function initApp(){
 
-
-   setTimeout(function() {
-        try {
-          navigator.splashscreen.hide();  
-        } catch (e){};
-        
-    }, 100);
+       
+     
 
      $.support.cors = true;
       
