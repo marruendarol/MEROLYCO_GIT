@@ -34,7 +34,7 @@ var ctrl_loginS = {
 			ctrl_loginS.checkLogin( {login:user,pw:pass,persistent:false})
 		});
 
-
+ 		alert("termino render login")
 		
 
 	},
