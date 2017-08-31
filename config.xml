@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="299" id="com.lyco.merolyco" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-versionCode="299" id="com.lyco.merolyco" version="1.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Merolyco</name>
     <description>
        Merolyco
@@ -116,6 +116,7 @@
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="wss://*/*" />
+    <engine name="ios" spec="~4.0.0" />
     <allow-navigation href="data:*" />
     
 </widget>

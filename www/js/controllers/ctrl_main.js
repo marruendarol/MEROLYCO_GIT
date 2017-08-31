@@ -18,16 +18,10 @@ function handleClicks(e){
 }
 
 
- document.addEventListener("deviceready", onDeviceReady, false);
-
 // DOM Ready =============================================================
 
 function onDeviceReady(){
 
-  setTimeout(function() {
-     navigator.splashscreen.hide();
-}, 1000);
- 
    initApp();
 }
 
@@ -47,13 +41,9 @@ function initApp(){
        
      
 
-     $.support.cors = true;
+  $.support.cors = true;
       
-    $.mobile.allowCrossDomainPages = true;
-  
-
-
-
+  $.mobile.allowCrossDomainPages = true;
 
    $.mobile.pageContainer = $('#container');
    $.mobile.defaultPageTransition = 'slide';

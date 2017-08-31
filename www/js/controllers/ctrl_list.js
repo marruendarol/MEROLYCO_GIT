@@ -3,7 +3,7 @@
 ***********************************************************/
 
 distVis = false;
-titleList = "Expedientes Abiertos";
+titleList = "";
 var spec = "";
 var expInt;
 var pacs = []
@@ -13,12 +13,11 @@ var ctrl_list = {
 	data : {},
 	pageDiv : "#listPCont",
 	init : function(data,template){
-		console.log('LOGER')
 		ctrl_list.data = data;
 		$(ctrl_list.pageDiv).empty();
-		
-
- titleList="Lineas";distVis=false;ctrl_list.getLineas()
+ 		titleList="Lineas";	
+ 		distVis=false;
+ 		ctrl_list.getLineas()
 		
 	//--------------------------------------------ZONA
 	},
@@ -50,8 +49,7 @@ var ctrl_list = {
 
 		jqm.hideLoader();
 
-		
-		
+			
 		var datar = { 
 			items  : data,
 					distVis : distVis,
@@ -64,7 +62,6 @@ var ctrl_list = {
 		ctrl_list.mainObj = template.render('#listT',ctrl_list.pageDiv,datar)
 
 		ctrl_list.mainObj.on('listDetail',function(event){
-			console.log("changing",event.context)
 			mainC.clickAnim(event.node)
 			paramsPage = { id : event.context._id, type: "listProductos", linea : event.context.id_cat_pri }
 			$.mobile.changePage("#listProductos");
@@ -95,7 +92,6 @@ var ctrl_list = {
 		jqm.hideLoader();
 
 		
-		
 		var datar = { 
 			items  : data,
 					distVis : distVis,
@@ -125,34 +121,6 @@ var ctrl_list = {
 			});
 		
 	
-
-	},
-	renderSeccs : function(data){
-		$('#titleList').text("Expediente")
-		console.log("render Seccs ")
-		var datar = {
-			nombre : data.info.nombre,
-			items: [{secname:"Datos personales",id:0},
-					{secname:"Antecedentes",id:1},
-					{secname:"Estudios",id:2},
-					{secname:"Histórico de notas",id:3}
-				]
-		}
-
-
-
-
-
-		ctrl_list.mainObj = template.render('#seccsExp',ctrl_list.pageDiv,datar)
-
-		$(ctrl_list.pageDiv).trigger("create");
-		//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-		 myScroll = new IScroll('#wrapperList',{  
-		 	click:true,useTransition:true,scrollbars:scrolls,mouseWheel:true,interactiveScrollbars: true })
-
-		ctrl_list.mainObj.on('clickSecc',function(e){
-			console.log(e.context,"CONTEXTO")
-		})		
 
 	}
 }

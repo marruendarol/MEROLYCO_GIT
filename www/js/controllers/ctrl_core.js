@@ -8,6 +8,7 @@ var ctrl_core = {
 	id 	 : "",
 	loadedControllers : [],
 	init : function(){	
+		
 		ctrl_core.routeListeners();
 
 
@@ -25,6 +26,7 @@ var ctrl_core = {
 	loadController : function(controllerURL,params,reload){
 		
 		if(reload || ctrl_core.loadedControllers.indexOf(controllerURL)==-1){
+			console.log("cargand controlador")
 			$.ajax({
 	        type: "GET",
 	        url: controllerURL,
@@ -37,6 +39,7 @@ var ctrl_core = {
 	        }
     		});
 		}else{
+			console.log("evaluando")
 			eval(params.init)(params);
 		}
 		ctrl_core.loadedControllers.push(controllerURL)
@@ -45,28 +48,9 @@ var ctrl_core = {
 	routeListeners : function(){
 
 
-		$(document).on("pagebeforeshow","#initialBlank", function() {
-	       	
-	    });
-
 		$(document).on("pagebeforeshow","#login", function() {
-	        	        var params = { init : 'ctrl_loginS.init' }
+	       var params = { init : 'ctrl_loginS.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
-	    });
-
-		$(document).on("pagebeforeshow","#insertCard", function() {
-	        var params = { init : 'ctrl_anadir.init', }
-	    	ctrl_core.loadController("./js/controllers/ctrl_anadir.js",params);
-	    });
-
-	    $(document).on("pagebeforeshow","#calendar", function() {
-	        var params = { init : 'ctrl_agendaM.init', }
-	    	ctrl_core.loadController("./js/controllers/ctrl_agendaM.js",params);
-	    });
-
-	    $(document).on("pagebeforeshow","#recuperar", function() {
-	        var params = { init : 'ctrl_recuperar.init' }
-	    	ctrl_core.loadController("./js/controllers/ctrl_recuperar.js",params);
 	    });
 
 	
@@ -82,15 +66,12 @@ var ctrl_core = {
 	    });
 
 
-
 	    // Expedientes -----------------------------------------------------------------
 
 	     $(document).on("pagebeforeshow","#listDesc", function() {
 	      	var params = { init : 'ctrl_listDesc.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_listDesc.js",params);
 	    });
-
-
 
 	    $(document).on("pagebeforeshow","#listProductos", function() {
 	      	var params = { init : 'ctrl_listProductos.init' }
@@ -105,24 +86,6 @@ var ctrl_core = {
 	      $(document).on("pagebeforeshow","#busProductos", function() {
 	      	var params = { init : 'ctrl_busProductos.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_busProductos.js",params);
-	    });
-
-	    //----------------------------------------------------------------------------
-
-
-	    $(document).on("pagebeforeshow","#mapa", function() {
-	      	var params = { init : 'ctrl_mapa.init' }
-	    	ctrl_core.loadController("./js/controllers/ctrl_mapa.js",params);
-	    });
-
-	    $(document).on("pagebeforeshow","#infoSuc", function() {
-	      	var params = { init : 'ctrl_info.init' }
-	    	ctrl_core.loadController("./js/controllers/ctrl_info.js",params);
-	    });
-
-	    $(document).on("pagebeforeshow","#contacto", function() {
-	      	var params = { init : 'ctrl_contacto.init' }
-	    	ctrl_core.loadController("./js/controllers/ctrl_contacto.js",params);
 	    });
 
 	  
