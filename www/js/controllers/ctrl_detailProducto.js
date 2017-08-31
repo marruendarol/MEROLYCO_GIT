@@ -28,11 +28,11 @@ var ctrl_detail = {
 		var precios = data.precios.split(",")
 		data.precios = precios;
 
-
+		var type= window.localStorage.getItem("type") || "ADMIN";
 
 		resObj = {
 			data : data,
-		    perms : getPerms(userdata.type)['catalogoList'].perms,
+		    perms : getPerms(type)['catalogoList'].perms,
 		}
 
 		var mainObj = template.render('#detailPT',ctrl_detail.pageDiv,resObj)

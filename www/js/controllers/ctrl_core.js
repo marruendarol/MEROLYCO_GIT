@@ -11,6 +11,15 @@ var ctrl_core = {
 		ctrl_core.routeListeners();
 
 
+		if(username!=undefined){
+			    // ctrl_loginS.initSocket()
+			   //  alert("main")
+				$.mobile.changePage("#mainScreen")
+			}else{
+				  var params = { init : 'ctrl_loginS.init' }
+	    	   ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
+			}
+
 	},
 	loadController : function(controllerURL,params,reload){
 		
@@ -36,17 +45,7 @@ var ctrl_core = {
 
 
 		$(document).on("pagebeforeshow","#initialBlank", function() {
-	       		var username= window.localStorage.getItem("username");
-	       		alert(user)
-			if(username!=undefined){
-				//$.mobile.changePage("#mainScreen")
-				var user  =window.localStorage.getItem("username") || "";
-				var pass =  window.localStorage.getItem("password") || "";
-				ctrl_loginS.checkLogin({login:user,pw:pass})
-
-			}else{
-				$.mobile.changePage("#login")
-			}
+	       	
 	    });
 
 		$(document).on("pagebeforeshow","#login", function() {

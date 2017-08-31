@@ -63,6 +63,8 @@ var ctrl_loginS = {
             		window.localStorage.setItem("username", response[0].login);
             		window.localStorage.setItem("password", response[0].pw);
             		window.localStorage.setItem("nombre", response[0].nombre);
+            		window.localStorage.setItem("type", response[0].type);
+
             		$.mobile.changePage("#mainScreen")
             	}else{
             		jqm.hideLoader();
