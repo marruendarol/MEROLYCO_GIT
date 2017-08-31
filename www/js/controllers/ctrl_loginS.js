@@ -2,8 +2,6 @@
 *	MAIN SCREEN CONTROLLER
 ***********************************************************/
 
-var socket; 
-var userRoom = "";
 
 
 var ctrl_loginS = {
@@ -49,7 +47,7 @@ var ctrl_loginS = {
 	checkLogin : function(data){
 
 		var params =  {login:data.username,pw:data.password,persistent:false}
-		console.log(params,"PARAMS")
+		
 
         $.ajax({
             type: 'POST',
@@ -69,7 +67,7 @@ var ctrl_loginS = {
             	}else{
             		jqm.hideLoader();
             		jqm.popup( {text:"Usuario y/o contraseña inválido",title:"Ingreso",callback: function(){
-            			$.mobile.changePage( "#login", {});
+            			//$.mobile.changePage( "#login", {});
             		}})
             		
             		//$.mobile.changePage( "#login", {});

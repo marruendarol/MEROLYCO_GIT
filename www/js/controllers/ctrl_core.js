@@ -18,8 +18,7 @@ var ctrl_core = {
 			   //  alert("main")
 				$.mobile.changePage("#mainScreen")
 			}else{
-				  var params = { init : 'ctrl_loginS.init' }
-	    	   ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
+				$.mobile.changePage("#login")
 			}
 
 	},
@@ -49,7 +48,7 @@ var ctrl_core = {
 
 
 		$(document).on("pagebeforeshow","#login", function() {
-	       var params = { init : 'ctrl_loginS.init' }
+	        var params = { init : 'ctrl_loginS.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
 	    });
 
