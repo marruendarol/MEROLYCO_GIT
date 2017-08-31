@@ -336,8 +336,7 @@ li{
 }
 
 #loginP{
-	z-index: 100;
-	position: relative;
+	
 }
 
 /* GEN USAGE --------------------------------------------------------- */
@@ -1049,7 +1048,7 @@ line-height: 35px;
 }
 
 .initialBlank{
-	background-color: #666;
+	
 }
 
 
