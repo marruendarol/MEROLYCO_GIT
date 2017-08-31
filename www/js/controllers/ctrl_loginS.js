@@ -1,7 +1,7 @@
 
 var ctrl_loginS = {
 	data : {},
-	pageDiv : "#loginJ",
+	pageDiv : "#loginP",
 	init : function(data){
 		ctrl_loginS.data = data;
 		ctrl_loginS.render();
@@ -10,12 +10,12 @@ var ctrl_loginS = {
 	render : function(){
 
 		//$(ctrl_loginS.pageDiv).empty();
-		var logObj = template.render('#loginTemp',ctrl_loginS.pageDiv,{},null)
+		var logObj = template.render('#loginT',ctrl_loginS.pageDiv,{},null)
 
 		$(ctrl_loginS.pageDiv).trigger("create");
 
 
-/*
+
 		$(document).on('focus', 'input, textarea', function() {
 	  try {
 		   $("#logoLoginB").hide(); } catch (e) {}
@@ -34,7 +34,7 @@ var ctrl_loginS = {
 			ctrl_loginS.checkLogin( {login:user,pw:pass,persistent:false})
 		});
 
-*/
+
 		
 
 	},

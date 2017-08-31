@@ -1,48 +1,23 @@
-<!-- FIRST ============================================================-->
-<script id='firstT' type='text/ractive'>
-           <button class="btnGen" on-tap="login">Ingresar a mi cuenta</button>
-         <!--  <button class="btnGen" on-tap="registro">Registrar usuario nuevo</button> -->
-</script>
 
 <!--  LOGIN ============================================================-->
-<script id='loginTemp' type='text/ractive'>
+<script id='loginT' type='text/ractive'>
 
 
-  <div id="wrapperMainLog" class="" >
+<div id="wrapperMainLog" class="">
 
-  		   <div id="logoLoginB">
-		<img src="img/logoForma.png">
-	</div>
-
-
-            <div class="labelT">Usuario:</div>
-            <input type="text" name="name" id="name"  value="" data-clear-btn="true" data-mini="true">
-             <div class="labelT">Contraseña: </div>
-            <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
-
-                <a href="#" data-rel="close" class="btnNaranja ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" on-tap="ingresar">Ingresar</a>    
-
-              <!--  <a class="linksTexto" href="#recuperar">¿Olvidaste tu contraseña?</a>-->
-
-  </div>
-
-
-</script>
-
-<!--  Recuperar ============================================================-->
-<script id='recuperarT' type='text/ractive'>
-    
-
-
-    <div  role="main" class="ui-content">
-      <div class="title">Ingresa tu correo y te enviaremos tu contraseña</div>
-            <div class="labelT">Correo:</div>
-            <input type="text" name="name" id="email" value="" data-clear-btn="true" data-mini="true">
-            <div class="ui-grid-a">
-				<a href="#" data-rel="close" class="btnNaranja ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" on-tap="recuperar">Enviar correo</a>
-            </div>
+    <div id="logoLoginB">
+        <img src="img/logoForma.png">
     </div>
-    
+    <div class="labelT">Usuario:</div>
+    <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+    <div class="labelT">Contraseña: </div>
+    <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+    <a href="#" data-rel="close" class="btnNaranja ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" on-tap="ingresar">Ingresar</a>
+    <!--  <a class="linksTexto" href="#recuperar">¿Olvidaste tu contraseña?</a>-->
+
+
+</div>
+
 
 </script>
 
@@ -388,20 +363,6 @@
 
     </div><!-- /panel -->
 
-
-
-		<div id="galCont">
-				<div on-tap="closeZoom" class="closeZoom">X</div>
-				 <div id="cardRepZoom" >
-            <div class="cardName">{{userData.nombre}}</div>
-             <div class="cardId">{{userData.cardHypen}}</div>
-            <div class="cardVenc">{{userData.vencimiento}}</div>
-            <!--<div class="cardCCV">{{userData.ccv}}</div> -->
-
-            </div>
-
-
-		</div>
 
 </script>
 

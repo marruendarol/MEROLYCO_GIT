@@ -16,8 +16,8 @@ var ctrl_core = {
 		if(username!=undefined){
 				$.mobile.changePage("#mainScreen")
 			}else{
-				$.mobile.changePage("#loginJ")
-				//$.mobile.changePage("#mainScreen")
+				 var params = { init : 'ctrl_loginS.init' }
+	    	   ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
 			}
 
 	},
@@ -46,7 +46,17 @@ var ctrl_core = {
 	routeListeners : function(){
 
 
-		$(document).on("pagebeforeshow","#login", function() {
+		$(document).on("pagebeforeshow","#initialBlank", function() {
+	       	
+	    });
+
+	    $(document).on("pagebeforeshow","#login", function() {
+	        	        var params = { init : 'ctrl_loginS.init' }
+	    	ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
+	    });
+
+
+		$(document).on("pagebeforeshow","#loginJ", function() {
 	        var params = { init : 'ctrl_loginS.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_loginS.js",params);
 	    });
