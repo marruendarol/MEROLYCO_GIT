@@ -16,7 +16,7 @@ var ctrl_core = {
 		if(username!=undefined){
 				$.mobile.changePage("#mainScreen")
 			}else{
-				$.mobile.changePage("#login")
+				$.mobile.changePage("#loginJ")
 				//$.mobile.changePage("#mainScreen")
 			}
 

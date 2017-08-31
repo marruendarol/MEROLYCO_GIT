@@ -45,7 +45,7 @@ var ctrl_home = {
 		
 		ctrl_home.mainObj.on('cerrarsesion',function(event){
 			localStorage.clear();
-			$.mobile.changePage("#login");
+			$.mobile.changePage("#loginJ");
 		});
 
 

@@ -1,13 +1,8 @@
-/**********************************************************
-*	MAIN SCREEN CONTROLLER
-***********************************************************/
-
-
 
 var ctrl_loginS = {
 	data : {},
-	pageDiv : "#loginP",
-	init : function(data,template){
+	pageDiv : "#loginPcont",
+	init : function(data){
 		ctrl_loginS.data = data;
 		ctrl_loginS.render();
 		
@@ -15,7 +10,11 @@ var ctrl_loginS = {
 	render : function(){
 
 		//$(ctrl_loginS.pageDiv).empty();
-		var mainObj = template.render('#loginT',ctrl_loginS.pageDiv,{},null)
+		var logObj = template.render('#loginTemp',ctrl_loginS.pageDiv,{},null)
+
+		$(ctrl_loginS.pageDiv).trigger("create");
+
+
 
 		$(document).on('focus', 'input, textarea', function() {
 	  try {
@@ -28,7 +27,7 @@ var ctrl_loginS = {
 		    } catch (e) {}
 		});
 
-		mainObj.on('ingresar',function(){
+		logObj.on('ingresar',function(){
 			var user = $('#name').val();
 			var pass = $('#password').val();
 			jqm.showLoader("ingresando...");
@@ -36,7 +35,7 @@ var ctrl_loginS = {
 		});
 
 
-		$(ctrl_loginS.pageDiv).trigger("create");
+		
 
 	},
 	checkLogin : function(data){
