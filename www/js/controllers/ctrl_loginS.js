@@ -1,7 +1,7 @@
 
 var ctrl_loginS = {
 	data : {},
-	pageDiv : "#loginPcont",
+	pageDiv : "#loginJ",
 	init : function(data){
 		ctrl_loginS.data = data;
 		ctrl_loginS.render();
@@ -15,7 +15,7 @@ var ctrl_loginS = {
 		$(ctrl_loginS.pageDiv).trigger("create");
 
 
-
+/*
 		$(document).on('focus', 'input, textarea', function() {
 	  try {
 		   $("#logoLoginB").hide(); } catch (e) {}
@@ -34,7 +34,7 @@ var ctrl_loginS = {
 			ctrl_loginS.checkLogin( {login:user,pw:pass,persistent:false})
 		});
 
-
+*/
 		
 
 	},
@@ -70,6 +70,6 @@ var ctrl_loginS = {
         }).fail(function( response, status ,a ) {
 	       console.log(response,status,a)
 	    });   
-	},
+	}
 	
 }

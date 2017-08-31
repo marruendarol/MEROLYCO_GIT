@@ -12,8 +12,6 @@ var ctrl_home = {
 	},
 	render : function(){
 
-
-
 		$(ctrl_home.pageDiv).empty();
 
 		ctrl_home.data  = {
