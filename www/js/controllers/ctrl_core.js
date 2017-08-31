@@ -16,7 +16,8 @@ var ctrl_core = {
 		if(username!=undefined){
 				$.mobile.changePage("#mainScreen")
 			}else{
-				$.mobile.changePage("#login")
+				//$.mobile.changePage("#login")
+				$.mobile.changePage("#mainScreen")
 			}
 
 	},
@@ -61,9 +62,6 @@ var ctrl_core = {
 	      	var params = { init : 'ctrl_list.init' }
 	    	ctrl_core.loadController("./js/controllers/ctrl_list.js",params);
 	    });
-
-
-	    // Expedientes -----------------------------------------------------------------
 
 	     $(document).on("pagebeforeshow","#listDesc", function() {
 	      	var params = { init : 'ctrl_listDesc.init' }

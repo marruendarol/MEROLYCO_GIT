@@ -1048,6 +1048,11 @@ line-height: 35px;
 	margin-bottom: 5px;
 }
 
+.initialBlank{
+	background-color: #666;
+}
+
+
 #ubica{
 	/* height: auto; */
 	/* min-height: 100%; */
