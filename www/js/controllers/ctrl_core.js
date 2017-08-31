@@ -11,6 +11,7 @@ var ctrl_core = {
 		ctrl_core.routeListeners();
 
 
+		var username= window.localStorage.getItem("username");
 		if(username!=undefined){
 			    // ctrl_loginS.initSocket()
 			   //  alert("main")
