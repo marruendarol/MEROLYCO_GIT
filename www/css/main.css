@@ -11,7 +11,7 @@
 }
 
 .mainBackI{
-	background : url('../img/fondo1.png');
+	
 	width: 100%;
 	height: auto;
 	overflow-y: hidden;
@@ -652,6 +652,17 @@ img { -ms-interpolation-mode: bicubic; image-rendering: -moz-crisp-edges; }
 
 
 #wrapperMain {
+    z-index: 1;
+    width: 99%;
+    /*important for iScroll to have the scroller scroll at max to top:45px on position absolute!*/
+    margin-top: 10px;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+#wrapperMainLog {
     z-index: 1;
     width: 99%;
     /*important for iScroll to have the scroller scroll at max to top:45px on position absolute!*/

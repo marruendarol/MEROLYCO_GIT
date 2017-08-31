@@ -14,8 +14,6 @@ var ctrl_core = {
 
 		var username= window.localStorage.getItem("username");
 		if(username!=undefined){
-			    // ctrl_loginS.initSocket()
-			   //  alert("main")
 				$.mobile.changePage("#mainScreen")
 			}else{
 				$.mobile.changePage("#login")

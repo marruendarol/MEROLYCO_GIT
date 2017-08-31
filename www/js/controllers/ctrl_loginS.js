@@ -14,7 +14,7 @@ var ctrl_loginS = {
 	},
 	render : function(){
 
-		$(ctrl_loginS.pageDiv).empty();
+		//$(ctrl_loginS.pageDiv).empty();
 		var mainObj = template.render('#loginT',ctrl_loginS.pageDiv,{},null)
 
 		$(document).on('focus', 'input, textarea', function() {
@@ -34,11 +34,6 @@ var ctrl_loginS = {
 			jqm.showLoader("ingresando...");
 			ctrl_loginS.checkLogin( {login:user,pw:pass,persistent:false})
 		});
-
-			mainObj.on('cancelar',function(){
-			$.mobile.changePage("#login");
-		});
-
 
 
 		$(ctrl_loginS.pageDiv).trigger("create");
