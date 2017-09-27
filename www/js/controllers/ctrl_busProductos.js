@@ -29,7 +29,7 @@ var ctrl_busProductos = {
 		//$('#loaderB').show();
 
 
-		var params =  "data=" +  JSON.stringify({"pn":1,"rpp":10,"si":"producto.cve_art","sd":"ASC","q":str}) 
+		var params =  "data=" +  JSON.stringify({"pn":1,"rpp":100,"si":"producto.cve_art","sd":"ASC","q":str}) 
 		dbC.query('api/getCatalogo','POST', params, ctrl_busProductos.dataRet);
 	},
 	dataRet : function(res){

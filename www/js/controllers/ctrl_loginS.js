@@ -50,14 +50,26 @@ var ctrl_loginS = {
             dataType: 'JSON'
             }).done(function( response ) {
             	if(response.length>0){
-            		userdata = response[0]
-       
-            		window.localStorage.setItem("username", response[0].login);
-            		window.localStorage.setItem("password", response[0].pw);
-            		window.localStorage.setItem("nombre", response[0].nombre);
-            		window.localStorage.setItem("type", response[0].type);
 
-            		$.mobile.changePage("#mainScreen")
+            		userdata = response[0]
+
+            		if(response[0].type=="4" || response[0].type=="5"){
+            			jqm.hideLoader();
+            		jqm.popup( {text:"Este tipo de usuario no tiene acceso al catálogo",title:"Ingreso",callback: function(){
+            			//$.mobile.changePage( "#login", {});
+            		}})
+            		
+            		}else{
+            			window.localStorage.setItem("username", response[0].login);
+            			window.localStorage.setItem("password", response[0].pw);
+            			window.localStorage.setItem("nombre", response[0].nombre);
+            			window.localStorage.setItem("type", response[0].type);
+
+            			$.mobile.changePage("#mainScreen")
+            		}
+            		
+       
+            		
             	}else{
             		jqm.hideLoader();
             		jqm.popup( {text:"Usuario y/o contraseña inválido",title:"Ingreso",callback: function(){

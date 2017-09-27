@@ -147,7 +147,7 @@ var dbC = {
 	        }).done(function( response ) {
         		if(callback) { callback(response,extra) }
 	        }).fail(function( response ) {
-	        	alert("Revise su conexión a internet")
+	        	alert("Revise su conexión a internet " + response)
 	           	console.log("fail query",response,extra);
 	           	if(errorCB) { errorCB(response,extra) }
 	    }); 

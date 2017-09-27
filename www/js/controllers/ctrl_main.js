@@ -63,6 +63,8 @@ function initApp(){
   })
 
   $('.hButton').bind( "tap",function(){
+    str = ""
+      $('#busquedaI').val('');
       $.mobile.changePage("#mainScreen")
   })
 
